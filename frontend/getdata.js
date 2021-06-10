@@ -4,7 +4,7 @@ function getFromServer() {
     // redirect: "follow",
   };
 
-  fetch("http://localhost:3000/customer/all", requestOptions)
+  fetch("http://localhost:3000/user/all", requestOptions)
     .then((response) => response.json())
     .then((data) => {
       var text = "<ul>";
@@ -40,7 +40,7 @@ function postData() {
     body: raw,
   };
 
-  fetch("http://localhost:3000/customer/add", requestOptions)
+  fetch("http://localhost:3000/user/add", requestOptions)
     .then((response) => response.text())
     .then((result) => $(".mypanel").html(result))
     .catch((error) => console.log("error", error));
@@ -50,7 +50,7 @@ function deleteData() {
   var requestOptions = {
     method: "DELETE",
   };
-  fetch("http://localhost:3000/customer/delete?id=74", requestOptions)
+  fetch("http://localhost:3000/user/delete?id=74", requestOptions)
     .then((response) => response.text())
     .then((result) => $(".mypanel").html(result))
     .catch((error) => console.log("error", error));
