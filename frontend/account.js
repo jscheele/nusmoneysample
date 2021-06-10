@@ -5,8 +5,9 @@ function getAccounts() {
       var text = "<ul>";
       data.forEach(function (item) {
         text += `<li>
-        Account ID: ${item.id} <br>
-        Account Type: ${item.type} <br>
+        Account ID: ${item.account_id} <br>
+        Account Name: ${item.account_name} <br>
+        Account Type: ${item.account_type} <br>
         Balance: ${item.balance}
         </li>`;
       });
@@ -24,8 +25,9 @@ function getAccountByAID() {
       var text = "<ul>";
       data.forEach(function (item) {
         text += `<li>
-        Account ID: ${item.id} <br>
-        Account Type: ${item.type} <br>
+        Account ID: ${item.account_id} <br>
+        Account Name: ${item.account_name} <br>
+        Account Type: ${item.account_type} <br>
         Balance: ${item.balance}
         </li>`;
       });

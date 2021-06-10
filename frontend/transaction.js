@@ -8,7 +8,7 @@ function getTransactions() {
         Transaction ID: ${item.transaction_id} <br>
         Timestamp: ${item.transaction_date} <br>
         Category: ${item.category} <br>
-        Account: ${item.account} <br>
+        Account ID: ${item.account_id} <br>
         Amount: ${item.amount}
         </li>`;
       });
@@ -29,7 +29,7 @@ function getTransactionByTID() {
         Transaction ID: ${item.transaction_id} <br>
         Timestamp: ${item.transaction_date} <br>
         Category: ${item.category} <br>
-        Account: ${item.account} <br>
+        Account ID: ${item.account_id} <br>
         Amount: ${item.amount}
         </li>`;
       });

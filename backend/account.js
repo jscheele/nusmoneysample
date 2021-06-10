@@ -21,7 +21,7 @@ router.get("/account/by-aid", (request, response) => {
     return;
   }
   database.connection.query(
-    `select * from account where id = ${request.query.id}`,
+    `select * from account where account_id = ${request.query.id}`,
     (errors, results) => {
       if (errors) {
         console.log(errors);
@@ -40,7 +40,7 @@ router.get("/account/by-uid", (request, response) => {
     return;
   }
   database.connection.query(
-    `select * from account where user = ${request.query.id}`,
+    `select * from account where user_id = ${request.query.id}`,
     (errors, results) => {
       if (errors) {
         console.log(errors);
