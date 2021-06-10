@@ -14,5 +14,5 @@ Not included are:
         npm install --save mysql express body-parser cors dotenv    /* install the modules required by the backen */
         
 To execute the code:
-1. In the /backend server folder, execute the node.js application with: npm start main.js
+1. In the /backend server folder, execute the node.js application with: npm main.js
 2. In the /frontend folder, open index.html in your browser
