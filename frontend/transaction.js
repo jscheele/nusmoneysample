@@ -2,17 +2,28 @@ function getTransactions() {
   fetch("http://localhost:3000/transaction/all", { method: "GET" })
     .then((response) => response.json())
     .then((data) => {
-      var text = "<ul>";
-      data.forEach(function (item) {
-        text += `<li>
-        Transaction ID: ${item.transaction_id} <br>
-        Timestamp: ${item.transaction_date} <br>
-        Category: ${item.category} <br>
-        Account: ${item.account} <br>
-        Amount: ${item.amount}
-        </li>`;
+      var text = `
+      <table>
+        <tr>
+          <th>Transaction ID</th>
+          <th>Timestamp</th>
+          <th>Category</th>
+          <th>Account Name</th>
+          <th>Amount</th>
+        </tr>`;
+
+      data.forEach((item) => {
+        text += `
+        <tr>
+          <td>${item.transaction_id}</td>
+          <td>${item.transaction_date}</td>
+          <td>${item.category}</td>
+          <td>${item.account}</td>
+          <td>${item.amount}</td>
+        </tr>`;
       });
-      text += "</ul>";
+
+      text += "</table>";
       $(".mypanel").html(text);
     })
     .catch((error) => console.log("error", error));
@@ -23,17 +34,28 @@ function getTransactionByTID() {
   fetch(`http://localhost:3000/transaction/by-tid?id=${id}`, { method: "GET" })
     .then((response) => response.json())
     .then((data) => {
-      var text = "<ul>";
-      data.forEach(function (item) {
-        text += `<li>
-        Transaction ID: ${item.transaction_id} <br>
-        Timestamp: ${item.transaction_date} <br>
-        Category: ${item.category} <br>
-        Account: ${item.account} <br>
-        Amount: ${item.amount}
-        </li>`;
+      var text = `
+      <table>
+        <tr>
+          <th>Transaction ID</th>
+          <th>Timestamp</th>
+          <th>Category</th>
+          <th>Account Name</th>
+          <th>Amount</th>
+        </tr>`;
+
+      data.forEach((item) => {
+        text += `
+        <tr>
+          <td>${item.transaction_id}</td>
+          <td>${item.transaction_date}</td>
+          <td>${item.category}</td>
+          <td>${item.account}</td>
+          <td>${item.amount}</td>
+        </tr>`;
       });
-      text += "</ul>";
+
+      text += "</table>";
       $(".mypanel").html(text);
     })
     .catch((error) => console.log("error", error));
