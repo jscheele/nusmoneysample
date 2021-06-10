@@ -4,34 +4,44 @@ const express = require("express");
 router = express.Router();
 
 router.get("/account/all", (request, response) => {
-
-
-    var get_all_accounts = () => {
-        database.connection.query(`select * from account`,
-            (errors, results) => {
-                if (errors) {
-                    console.log(errors);
-                } else {
-                    console.log(results);
-                }
-            }
-        );
-    };
-
-
-    var get_account_by_id = (id) => {
-        database.connection.query(`select * from account where user = ${id}`,
-            (errors, results) => {
-                if (errors) {
-                    console.log(errors);
-                } else {
-                    console.log(results);
-                }
-            }
-        );
-    };
+  database.connection.query(`select * from account`, (errors, results) => {
+    if (errors) {
+      console.log(errors);
+      response.status(500).send("Internal Serve Error");
+    } else {
+      response.status(200).send(results);
+    }
+  });
 });
 
-    module.exports = {
-        router
-    };
+router.get("/account/by-aid", (request, response) => {
+  database.connection.query(
+    `select * from account where id = ${request.query.id}`,
+    (errors, results) => {
+      if (errors) {
+        console.log(errors);
+        response.status(500).send("Internal Serve Error");
+      } else {
+        response.status(200).send(results);
+      }
+    }
+  );
+});
+
+router.get("/account/by-uid", (request, response) => {
+  database.connection.query(
+    `select * from account where user = ${request.query.id}`,
+    (errors, results) => {
+      if (errors) {
+        console.log(errors);
+        response.status(500).send("Internal Serve Error");
+      } else {
+        response.status(200).send(results);
+      }
+    }
+  );
+});
+
+module.exports = {
+  router,
+};
