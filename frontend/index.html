@@ -2,42 +2,43 @@
 <html lang="en">
 
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Read Data from Server</title>
-  <script src="client.js"></script>
-  <script src="user.js"></script>
-  <script src="account.js"></script>
-  <script src="transaction.js"></script>
-  <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
-  <style>
-    table,
-    th,
-    td {
-      padding: 10px;
-      border: 1px solid black;
-      border-collapse: collapse;
-    }
-  </style>
-  <!-- My sample pages -->
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <title>Read Data from Server</title>
+    <script src="user.js"></script>
+    <script src="account.js"></script>
+    <script src="transaction.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <style>
+        table,
+        th,
+        td {
+            padding: 10px;
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+    </style>
+    <!-- My sample pages -->
 </head>
 
 <body>
-  <div>
+<div>
     <H1> READ USER DATA FROM BACKEND SERVER </H1>
     <h2> Note: Start the backend server first </h2>
-  </div>
+</div>
 
-  <button class="btn btn-info" onclick="getUsers()">View All Users</button>
-  <button class="btn btn-info" onclick="getAccounts()">View All Accounts</button>
-  <button class="btn btn-info" onclick="getTransactions()">View All Transactions</button> <br>
+<button class="btn btn-info" onclick="getUsers()">View All Users</button>
+<button class="btn btn-info" onclick="getAccounts()">View All Accounts</button>
+<button class="btn btn-info" onclick="getTransactions()">View All Transactions</button>
+<br>
 
-  <button class="btn btn-info" onclick="getUserByUID()">Search User</button>
-  <button class="btn btn-info" onclick="getAccountByAID()">Search Account</button>
-  <button class="btn btn-info" onclick="getTransactionByTID()">Search Transaction</button> <br>
-  Enter ID: <input type="text" id="paramId" />
-  <div class="mypanel"> </div>
+<button class="btn btn-info" onclick="getUserByUID()">Search User</button>
+<button class="btn btn-info" onclick="getAccountByAID()">Search Account</button>
+<button class="btn btn-info" onclick="getTransactionByTID()">Search Transaction</button>
+<br>
+Enter ID: <input type="text" id="paramId"/>
+<div class="mypanel"></div>
 
 </body>
