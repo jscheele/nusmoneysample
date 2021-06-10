@@ -15,6 +15,11 @@ router.get("/account/all", (request, response) => {
 });
 
 router.get("/account/by-aid", (request, response) => {
+  if (request.query.id.length == 0 || isNaN(request.query.id)) {
+    console.log(`Invalid ID received. ID: ${request.query.id}`);
+    response.status(400).send("Invalid ID received.");
+    return;
+  }
   database.connection.query(
     `select * from account where id = ${request.query.id}`,
     (errors, results) => {
@@ -29,6 +34,11 @@ router.get("/account/by-aid", (request, response) => {
 });
 
 router.get("/account/by-uid", (request, response) => {
+  if (request.query.id.length == 0 || isNaN(request.query.id)) {
+    console.log(`Invalid ID received. ID: ${request.query.id}`);
+    response.status(400).send("Invalid ID received.");
+    return;
+  }
   database.connection.query(
     `select * from account where user = ${request.query.id}`,
     (errors, results) => {
