@@ -1,5 +1,5 @@
 function getAccounts() {
-<<<<<<< HEAD
+
   fetch("http://localhost:3000/account/all", { method: "GET" })
     .then((response) => response.json())
     .then((data) => {
@@ -36,7 +36,7 @@ function getAccountByAID() {
       $(".mypanel").html(text);
     })
     .catch((error) => console.log("error", error));
-=======
+
     fetch("http://localhost:3000/account/all", {method: "GET"})
         .then((response) => response.json())
         .then((data) => {
@@ -96,5 +96,5 @@ function getAccountByAID() {
             $(".mypanel").html(text);
         })
         .catch((error) => console.log("error", error));
->>>>>>> 19b88298449733cfe75b65f333f35a6965d62adb
+
 }
