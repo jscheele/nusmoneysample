@@ -10,5 +10,5 @@ Not included are:
 - Database connection parameters. You will need to create a .env file in the /backend folder to contain connection parameters for your MySQL database.
 - Node modules. You will need to initialise a node.js project in the /backend folder:
         npm init
-        npm install --save mysql express body-parser cors
+        npm install --save mysql express body-parser cors dotenv
         
