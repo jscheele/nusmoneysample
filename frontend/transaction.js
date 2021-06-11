@@ -18,7 +18,7 @@ function getTransactions() {
                       <td>${item.transaction_id}</td>
                       <td>${item.transaction_date}</td>
                       <td>${item.category}</td>
-                      <td>${item.account}</td>
+                      <td>${item.account_id}</td>
                       <td>${item.amount}</td>
                     </tr>`;
             });
@@ -49,7 +49,7 @@ function getTransactionByTID() {
                       <td>${item.transaction_id}</td>
                       <td>${item.transaction_date}</td>
                       <td>${item.category}</td>
-                      <td>${item.account}</td>
+                      <td>${item.account_id}</td>
                       <td>${item.amount}</td>
                     </tr>`;
             });
