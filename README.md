@@ -20,6 +20,7 @@ Not included are:
 ````     
 To execute the code:
 1. In the **/backend** server folder, execute the node.js application with:
-```node main.js
+```
+        node main.js
 ```
 3. In the **/frontend** folder, open index.html in your browser
