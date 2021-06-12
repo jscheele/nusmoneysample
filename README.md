@@ -1,6 +1,8 @@
 # nusmoneysample
 Sample NUSmoney app featuring HTML-CSS-Javascript frontend, Node.js backend and MySQL database
 
+This is a sample application for the National University of Singapore's [FintechSG Programme](https://fintechlab.nus.edu.sg/nus-fintechsg-programme/).
+
 This repo consists of the folders:
 /frontend         HTML, CSS, Javascript code for the frontend client
 /backend          Node.js code for the backend server
