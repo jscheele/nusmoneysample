@@ -23,4 +23,4 @@ To execute the code:
 ```
         node main.js
 ```
-3. In the **/frontend** folder, open index.html in your browser
+3. In the **/frontend** folder, open **index.html** in your browser
