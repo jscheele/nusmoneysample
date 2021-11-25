@@ -10,6 +10,7 @@ const properties = {
     user: `${process.env.DBUSER}`,
     password: `${process.env.DBPASSWD}`,
     database: `${process.env.DBNAME}`,
+    multipleStatements: true
 };
 
 // Create a connection object which will hold the connection to cloud mysql server.

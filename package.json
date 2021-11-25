@@ -1,0 +1,26 @@
+{
+  "name": "nusmoney_cryptmon",
+  "version": "1.0.0",
+  "description": "A sample application for the **National University of Singapore**'s [FintechSG Programme](https://fintechlab.nus.edu.sg/nus-fintechsg-programme/). This sample NUSmoney app features HTML-CSS-Javascript frontend, Node.js backend and MySQL database.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/YizhunSim/nusmoneysample.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/YizhunSim/nusmoneysample/issues"
+  },
+  "homepage": "https://github.com/YizhunSim/nusmoneysample#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^10.0.0",
+    "eslint": "^8.3.0",
+    "express": "^4.17.1",
+    "mysql": "^2.18.1"
+  }
+}
