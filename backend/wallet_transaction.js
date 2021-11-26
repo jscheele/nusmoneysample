@@ -74,27 +74,27 @@ router.post("/wallet_transaction/add", (request, response) =>{
     })
 })
 
-// Define a mapping for a DELETE request on API path /wallet_transaction/delete
-// to an arrow function which requires a parameter named id from the request
-// and calls a mysql query and populates the response with the data.
-router.delete("/wallet_transaction/delete", (request, response) => {
-    if (request.query.transaction_id.length === 0 || isNaN(request.query.transaction_id)) {
-        console.log(`Invalid ID received. ID: ${request.query.transaction_id}`);
-        response.status(400).send("Invalid ID received.");
-        return;
-    }
+// // Define a mapping for a DELETE request on API path /wallet_transaction/delete
+// // to an arrow function which requires a parameter named id from the request
+// // and calls a mysql query and populates the response with the data.
+// router.delete("/wallet_transaction/delete", (request, response) => {
+//     if (request.query.transaction_id.length === 0 || isNaN(request.query.transaction_id)) {
+//         console.log(`Invalid ID received. ID: ${request.query.transaction_id}`);
+//         response.status(400).send("Invalid ID received.");
+//         return;
+//     }
 
-    var query = `delete from wallet_transaction where transaction_id = ${request.query.transaction_id}`;
-        database.connection.query(query, (error, result) => {
-            if (error){
-                console.log(`Unable to delete wallet transaction: ${request.query.transaction_id}. Error: ${error}`);
-                response.status(500).send(`Unable to delete transaction record: ${request.query.transaction_id}`);
-            }else{
-                response.status(200).send("Transaction deleted successfully");
-            }
-        })
+//     var query = `delete from wallet_transaction where transaction_id = ${request.query.transaction_id}`;
+//         database.connection.query(query, (error, result) => {
+//             if (error){
+//                 console.log(`Unable to delete wallet transaction: ${request.query.transaction_id}. Error: ${error}`);
+//                 response.status(500).send(`Unable to delete transaction record: ${request.query.transaction_id}`);
+//             }else{
+//                 response.status(200).send("Transaction deleted successfully");
+//             }
+//         })
 
-})
+// })
 
 module.exports = {
     router,

@@ -161,6 +161,19 @@ router.delete("/account/delete", (request, response) => {
         getUserIdAccount();
 })
 
+router.put("/account/update-balance", (request, response) =>{
+    let wallet = request.body;
+    console.log(`Request object to be sent out: ${JSON.stringify(wallet)}`);
+    database.connection.query(`update account set wallet_balance = (${wallet.wallet_balance}) where account_id = ${wallet.account_id};`, (error, records) =>{
+        if(error){
+            console.log(error)
+            response.status(500).send("Some error occured when updating wallet balance");
+        }else{
+            response.status(200).send("Wallet balance successfully updated to database");
+        }
+    })
+})
+
 module.exports = {
     router,
 };
