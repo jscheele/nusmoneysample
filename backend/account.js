@@ -123,7 +123,7 @@ router.delete("/account/delete", (request, response) => {
             })
         }
 
-        async function deleteAccount(data1){
+       async function deleteAccount(data1){
             var query2 = `delete from account where account_id = ${request.query.account_id}`;
             database.connection.query(query2, async (error, result) => {
                 console.log(query2);

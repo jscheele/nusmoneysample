@@ -1,0 +1,867 @@
+{
+	"info": {
+		"_postman_id": "d704ea9b-eeae-47c6-958f-a4069fd1031b",
+		"name": "Cryptmonbackendstub",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "user",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{url}}/user/all",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"user",
+						"all"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "user: all",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/user/all",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"user",
+								"all"
+							],
+							"query": [
+								{
+									"key": "user_id",
+									"value": "<integer>",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [],
+					"cookie": [],
+					"body": "[\n    {\n        \"user_id\": 12345,\n        \"name\": \"Leo Tolstoy\",\n        \"updated_at\": \"2021-11-24T16:00:00.000Z\",\n        \"picture\": null,\n        \"email\": \"Tolstoy@gmail.com\",\n        \"email_verified\": 0\n    },\n    {\n        \"user_id\": 23456,\n        \"name\": \"Herman Melville\",\n        \"updated_at\": \"2021-11-24T16:00:00.000Z\",\n        \"picture\": null,\n        \"email\": \"Herman@gmail.com\",\n        \"email_verified\": 0\n    },\n    {\n        \"user_id\": 34567,\n        \"name\": \"Jack London\",\n        \"updated_at\": \"2021-11-24T16:00:00.000Z\",\n        \"picture\": null,\n        \"email\": \"JackLondon@gmail.com\",\n        \"email_verified\": 0\n    },\n    {\n        \"user_id\": 45678,\n        \"name\": \"JRR Tolkien\",\n        \"updated_at\": \"2021-11-24T16:00:00.000Z\",\n        \"picture\": null,\n        \"email\": \"Tolkien@gmail.com\",\n        \"email_verified\": 0\n    },\n    {\n        \"user_id\": 56789,\n        \"name\": \"Rudyard Kipling\",\n        \"updated_at\": \"2021-11-24T16:00:00.000Z\",\n        \"picture\": null,\n        \"email\": \"RudyardKipling\",\n        \"email_verified\": 0\n    }\n]"
+				},
+				{
+					"name": "user_id=12345",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/user/by-uid?user_id=1",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"user",
+								"by-uid"
+							],
+							"query": [
+								{
+									"key": "user_id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [],
+					"cookie": [],
+					"body": "[\n    {\n        \"user_id\": 12345,\n        \"name\": \"Leo Tolstoy\",\n        \"updated_at\": \"2021-11-24T16:00:00.000Z\",\n        \"picture\": null,\n        \"email\": \"Tolstoy@gmail.com\",\n        \"email_verified\": 0\n    \n]"
+				},
+				{
+					"name": "user_id=\"12345\"",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/user/by-uid?user_id=\"1\"",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"user",
+								"by-uid"
+							],
+							"query": [
+								{
+									"key": "user_id",
+									"value": "\"1\""
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [],
+					"cookie": [],
+					"body": "[\n     {\n        \"user_id\": 12345,\n        \"name\": \"Leo Tolstoy\",\n        \"updated_at\": \"2021-11-24T16:00:00.000Z\",\n        \"picture\": null,\n        \"email\": \"Tolstoy@gmail.com\",\n        \"email_verified\": 0\n    \n]"
+				},
+				{
+					"name": "user_id=23456",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/user/by-uid?user_id=2",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"user",
+								"by-uid"
+							],
+							"query": [
+								{
+									"key": "user_id",
+									"value": "2"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [],
+					"cookie": [],
+					"body": "[\n    {\n        \"user_id\": 23456,\n        \"name\": \"Herman Melville\",\n        \"updated_at\": \"2021-11-24T16:00:00.000Z\",\n        \"picture\": null,\n        \"email\": \"Herman@gmail.com\",\n        \"email_verified\": 0\n    }\n]"
+				},
+				{
+					"name": "user_id=\"23456\"",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/user/by-uid?user_id=\"2\"",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"user",
+								"by-uid"
+							],
+							"query": [
+								{
+									"key": "user_id",
+									"value": "\"2\""
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [],
+					"cookie": [],
+					"body": "[\n    {\n        \"user_id\": 23456,\n        \"name\": \"Herman Melville\",\n        \"updated_at\": \"2021-11-24T16:00:00.000Z\",\n        \"picture\": null,\n        \"email\": \"Herman@gmail.com\",\n        \"email_verified\": 0\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "user/individual",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/user/by-uid?user_id=12345",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"user",
+						"by-uid"
+					],
+					"query": [
+						{
+							"key": "user_id",
+							"value": "12345"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "user/add",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"user_id\": 2,\r\n    \"first_name\": \"Joe\",\r\n    \"last_name\": \"Bloggs\",\r\n    \"email\": \"joe@bloggsville.com\",\r\n    \"phone\": \"+65 1234 5678\",\r\n    \"plan_id\": 1,\r\n    \"signup_date\": \"13-Aug-2021\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/user/add",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"user",
+						"add"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "user/add",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"user_id\": 67890,\r\n    \"name\": \"Charlie Munger\",\r\n    \"updated_at\": \"01-Dec-2021\",\r\n    \"picture\": \"http://www.picture.com\",\r\n    \"email\": \"abc@gmail.com\",\r\n    \"email_verified\": 0\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/user/add",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"user",
+								"add"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "text",
+					"header": [],
+					"cookie": [],
+					"body": "User added to database successfully"
+				}
+			]
+		},
+		{
+			"name": "account",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/account/all",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"account",
+						"all"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "account: all:Admin",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/account/all",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"account",
+								"all"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "<integer>",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "Text",
+					"header": [],
+					"cookie": [],
+					"body": "[\r\n    {\r\n        \"account_id\": 1,\r\n        \"user_id\": 12345,\r\n        \"account_name\": \"Leo Tolstoy\",\r\n        \"wallet_id\": \"216718574-X\"\r\n    },\r\n    {\r\n        \"account_id\": 2,\r\n        \"user_id\": 23456,\r\n        \"account_name\": \"Herman Melville\",\r\n        \"wallet_id\": \"299877940-9\"\r\n    },\r\n    {\r\n        \"account_id\": 3,\r\n        \"user_id\": 34567,\r\n        \"account_name\": \"Jack London\",\r\n        \"wallet_id\": \"379926608-9\"\r\n    },\r\n    {\r\n        \"account_id\": 4,\r\n        \"user_id\": 45678,\r\n        \"account_name\": \"JRR Tolkien\",\r\n        \"wallet_id\": \"535429048-1\"\r\n    },\r\n    {\r\n        \"account_id\": 5,\r\n        \"user_id\": 56789,\r\n        \"account_name\": \"Rudyard Kipling\",\r\n        \"wallet_id\": \"646391776-1\"\r\n    }\r\n]"
+				},
+				{
+					"name": "account: all for user_id=23456",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/account/by-uid?user_id=1",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"account",
+								"by-uid"
+							],
+							"query": [
+								{
+									"key": "user_id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "Text",
+					"header": [],
+					"cookie": [],
+					"body": "[\r\n    {\r\n        \"account_id\": 1,\r\n        \"user_id\": 1,\r\n        \"account_name\": \"Fred Nerk Cheque\",\r\n        \"account_type\": \"Cheque\",\r\n        \"balance\": 1000.00,\r\n        \"credit_limit\": 0\r\n    },\r\n    {\r\n        \"account_id\": 2,\r\n        \"user_id\": 1,\r\n        \"account_name\": \"Fred Nerk Savings\",\r\n        \"account_type\": \"Savings\",\r\n        \"balance\": 10000.00,\r\n        \"credit_limit\": 0\r\n    },\r\n    {\r\n        \"account_id\": 3,\r\n        \"user_id\": 1,\r\n        \"account_name\": \"Fred Nerk Credit Card\",\r\n        \"account_type\": \"Credit\",\r\n        \"balance\": -243.00,\r\n        \"credit_limit\": 10000.00\r\n    }\r\n]"
+				},
+				{
+					"name": "account: all for user_id=12345",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/account/by-uid?user_id=2",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"account",
+								"by-uid"
+							],
+							"query": [
+								{
+									"key": "user_id",
+									"value": "2"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "Text",
+					"header": [],
+					"cookie": [],
+					"body": "[\r\n    {\r\n        \"account_id\": 4,\r\n        \"user_id\": 2,\r\n        \"account_name\": \"Joe Bloggs Cheque\",\r\n        \"account_type\": \"Cheque\",\r\n        \"balance\": 1400.00,\r\n        \"credit_limit\": 0\r\n    },\r\n    {\r\n        \"account_id\": 5,\r\n        \"user_id\": 2,\r\n        \"account_name\": \"Joe Bloggs Savings\",\r\n        \"account_type\": \"Savings\",\r\n        \"balance\": 9000.00,\r\n        \"credit_limit\": 0\r\n    },  \r\n    {\r\n        \"account_id\": 6,\r\n        \"user_id\": 2,\r\n        \"account_name\": \"Joe Bloggs Credit Card\",\r\n        \"account_type\": \"Credit\",\r\n        \"balance\": -455.00,\r\n        \"credit_limit\": 20000\r\n    },\r\n]"
+				},
+				{
+					"name": "account: for account_id=1",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/account/by-aid?account_id=1",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"account",
+								"by-aid"
+							],
+							"query": [
+								{
+									"key": "account_id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"_postman_previewlanguage": "Text",
+					"header": [],
+					"cookie": [],
+					"body": " [\r\n    {\r\n        \"account_id\": 1,\r\n        \"user_id\": 12345,\r\n        \"account_name\": \"Leo Tolstoy\",\r\n        \"wallet_id\": \"216718574-X\"\r\n    }\r\n ]"
+				}
+			]
+		},
+		{
+			"name": "account/add",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"account_id\": 7,\r\n    \"user_id\": 78901,\r\n    \"account_name\": \"Warren Buffett\",\r\n    \"wallet_id\": \"859285275-W\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/account/add",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"account",
+						"add"
+					],
+					"query": [
+						{
+							"key": "user_id",
+							"value": "<integer>",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "account/add",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"account_id\": 6,\r\n    \"user_id\": 67890,\r\n    \"account_name\": \"Charlie Munger\",\r\n    \"wallet_id\": \"537853736-B\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/account/add?user_id=<integer>",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"account",
+								"add"
+							],
+							"query": [
+								{
+									"key": "user_id",
+									"value": "<integer>"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "Text",
+					"header": [],
+					"cookie": [],
+					"body": "\"Account created successfully\""
+				}
+			]
+		},
+		{
+			"name": "update wallet balance",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"account_id\": 1,\r\n    \"wallet_balance\": 200.00\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/wallet/update-balance",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"wallet",
+						"update-balance"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "update balance",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"account_id\": 1,\r\n    \"balance\": 200.00\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/account/update-balance?account_id=1&balance=200.00",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"account",
+								"update-balance"
+							],
+							"query": [
+								{
+									"key": "account_id",
+									"value": "1"
+								},
+								{
+									"key": "balance",
+									"value": "200.00"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "Text",
+					"header": [],
+					"cookie": [],
+					"body": "Wallet balance successfully updated to database"
+				}
+			]
+		},
+		{
+			"name": "account/delete",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/account/delete?account_id=5400",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"account",
+						"delete"
+					],
+					"query": [
+						{
+							"key": "account_id",
+							"value": "5400"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "account/delete?account_id=1",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/account/delete?account_id=1",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"account",
+								"delete"
+							],
+							"query": [
+								{
+									"key": "account_id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "Text",
+					"header": [],
+					"cookie": [],
+					"body": "\"Account deleted successfully!\""
+				}
+			]
+		},
+		{
+			"name": "wallet_transaction/all",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/wallet_transaction/all",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"wallet_transaction",
+						"all"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "transactions: all by user",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/transaction/all",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"transaction",
+								"all"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [],
+					"cookie": [],
+					"body": "[\r\n    {\r\n        \"transaction_id\": 1,\r\n        \"transaction_date\": \"2021-11-24T16:00:00.000Z\",\r\n        \"wallet_id\": \"216718574-X\",\r\n        \"cryptocurrency_id\": 1,\r\n        \"cyptocurrency_amount\": 0,\r\n        \"fiat_amount\": 286,\r\n        \"fiat_currency\": \"USD\"\r\n    },\r\n    {\r\n        \"transaction_id\": 2,\r\n        \"transaction_date\": \"2021-11-24T16:00:00.000Z\",\r\n        \"wallet_id\": \"299877940-9\",\r\n        \"cryptocurrency_id\": 2,\r\n        \"cyptocurrency_amount\": 0,\r\n        \"fiat_amount\": 34,\r\n        \"fiat_currency\": \"USD\"\r\n    },\r\n    {\r\n        \"transaction_id\": 3,\r\n        \"transaction_date\": \"2021-11-24T16:00:00.000Z\",\r\n        \"wallet_id\": \"379926608-9\",\r\n        \"cryptocurrency_id\": 3,\r\n        \"cyptocurrency_amount\": 0,\r\n        \"fiat_amount\": 6,\r\n        \"fiat_currency\": \"USD\"\r\n    },\r\n    {\r\n        \"transaction_id\": 4,\r\n        \"transaction_date\": \"2021-11-24T16:00:00.000Z\",\r\n        \"wallet_id\": \"535429048-1\",\r\n        \"cryptocurrency_id\": 3,\r\n        \"cyptocurrency_amount\": 0,\r\n        \"fiat_amount\": 30,\r\n        \"fiat_currency\": \"USD\"\r\n    },\r\n    {\r\n        \"transaction_id\": 5,\r\n        \"transaction_date\": \"2021-11-24T16:00:00.000Z\",\r\n        \"wallet_id\": \"646391776-1\",\r\n        \"cryptocurrency_id\": 2,\r\n        \"cyptocurrency_amount\": 0,\r\n        \"fiat_amount\": 214,\r\n        \"fiat_currency\": \"USD\"\r\n    }\r\n]"
+				}
+			]
+		},
+		{
+			"name": "wallet_transaction: by transaction_id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/transaction/by-tid?transaction_id=1",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"transaction",
+						"by-tid"
+					],
+					"query": [
+						{
+							"key": "transaction_id",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "transactions: by transaction_id",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/transactions/by-tid?transaction_id=1",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"transactions",
+								"by-tid"
+							],
+							"query": [
+								{
+									"key": "transaction_id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"_postman_previewlanguage": "json",
+					"header": [],
+					"cookie": [],
+					"body": "[\r\n    {\r\n        \"transaction_id\": 1,\r\n        \"transaction_date\": \"2021-11-24T16:00:00.000Z\",\r\n        \"wallet_id\": \"216718574-X\",\r\n        \"cryptocurrency_id\": 1,\r\n        \"cyptocurrency_amount\": 0,\r\n        \"fiat_amount\": 286,\r\n        \"fiat_currency\": \"USD\"\r\n    }\r\n]"
+				}
+			]
+		},
+		{
+			"name": "transaction: by wallet_id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/wallet_transaction/by-wid?wallet_id=3",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"wallet_transaction",
+						"by-wid"
+					],
+					"query": [
+						{
+							"key": "wallet_id",
+							"value": "3"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "transactions: all by user",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/wallet_transaction/by-wid?wallet_id=3",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"wallet_transaction",
+								"by-wid"
+							],
+							"query": [
+								{
+									"key": "wallet_id",
+									"value": "3"
+								}
+							]
+						}
+					},
+					"_postman_previewlanguage": "json",
+					"header": [],
+					"cookie": [],
+					"body": "[\r\n    {\r\n        \"transaction_id\": 3,\r\n        \"transaction_date\": \"2021-11-24T16:00:00.000Z\",\r\n        \"wallet_id\": \"379926608-9\",\r\n        \"cryptocurrency_id\": 3,\r\n        \"cyptocurrency_amount\": 0,\r\n        \"fiat_amount\": 6,\r\n        \"fiat_currency\": \"USD\"\r\n    }\r\n]"
+				}
+			]
+		},
+		{
+			"name": "wallet_transaction/add",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "    {\r\n        \"user_id\": 1,\r\n        \"transaction_id\": 1,\r\n        \"transaction_date\": \"03/09/2021\",\r\n        \"account_id\": 3,\r\n        \"category\": \"Groceries\",\r\n        \"merchant\": \"NTUC FairPrice\",\r\n        \"amount\": 34.50\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/transaction/add",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"transaction",
+						"add"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": "",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "transaction/add",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "    {\r\n        \"user_id\": 1,\r\n        \"transaction_id\": 1,\r\n        \"transaction_date\": \"03/09/2021\",\r\n        \"account_id\": 3,\r\n        \"category\": \"Groceries\",\r\n        \"merchant\": \"NTUC FairPrice\",\r\n        \"amount\": 34.50\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/transaction/add",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"transaction",
+								"add"
+							],
+							"query": [
+								{
+									"key": "",
+									"value": null,
+									"disabled": true
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "Text",
+					"header": [],
+					"cookie": [],
+					"body": "\"Transaction added successfully\""
+				}
+			]
+		},
+		{
+			"name": "wallet_transaction/delete",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/wallet_transaction/delete?transaction_id=5",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"wallet_transaction",
+						"delete"
+					],
+					"query": [
+						{
+							"key": "transaction_id",
+							"value": "5"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "transactions: all by user",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/wallet_transaction/delete?transaction_id=5",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"wallet_transaction",
+								"delete"
+							],
+							"query": [
+								{
+									"key": "transaction_id",
+									"value": "5"
+								}
+							]
+						}
+					},
+					"_postman_previewlanguage": "text",
+					"header": [],
+					"cookie": [],
+					"body": "Transaction deleted successfully"
+				}
+			]
+		}
+	]
+}
