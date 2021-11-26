@@ -10,7 +10,8 @@ const user = require("./user");
 const account = require("./account");
 // const transaction = require("./transaction");
 const wallet_transaction = require("./wallet_transaction");
-const wallet = require("./wallet.js");
+//const wallet = require("./wallet.js");
+const pet = require("./pet");
 
 // create a service object which will listen to clients' requests
 service = express();
@@ -26,9 +27,11 @@ service.use(account.router);
 // Import API path mappings from transaction.js
 // service.use(transaction.router);
 // Import API path mappings from wallet.js
-service.use(wallet.router);
+//service.use(wallet.router);
 // Import API path mappings from wallet_transaction.js
 service.use(wallet_transaction.router);
+// Import API path mappings from pet.js
+service.use(pet.router);
 
 // Start the service at port number 3000
 service.listen(3000);
