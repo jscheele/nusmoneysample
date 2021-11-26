@@ -38,7 +38,7 @@ router.get("/user/by-uid", (request, response) => {
 
 router.post("/user/add", (request, response) =>{
     let user = request.body;
-    console.log(`Request object to be sent out: ${user}`);
+    console.log(`Request object to be sent out: ${JSON.stringify(user)}`);
     database.connection.query(`insert into user (user_id, name, updated_at, picture, email, email_verified) values ("${user.user_id}", "${user.name}", now(), "${user.picture}", "${user.email}", "${user.email_verified}");`, (error, records) =>{
         if(error){
             console.log(error)
